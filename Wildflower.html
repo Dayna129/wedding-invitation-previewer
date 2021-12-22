@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Wildflower Wedding Invitation</title>
+    <!--link css style file to html file-->
+    <link rel="stylesheet" href="WildflowerStyle.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header class=heading>
+        <h2>Design your own</h2>
+        <h1>Wildflower Wedding Invitation</h1>
+        </header>
+
+        <!--column 1 (LHS)-->
+        <div class="column style">
+            <h2>Select a Style</h2>
+            <br><br>
+            
+            <img src="../wedding-invitation-previewer/bgImages/pinkProtia.jpeg" title="pinkProtia" style="width:120px; padding-bottom: 10px; cursor: pointer; background-size: 650px, 550px;" onclick="changeBGImage('pinkProtia');">
+            <br>
+            
+            
+
+            <img src="../wedding-invitation-previewer/bgImages/yellowBanksia.jpeg" title="yellowBanksia" style="width:120px; padding-bottom: 10px; cursor: pointer;" onclick="changeBGImage('yellowBanksia');">
+            <br>
+            
+            
+
+            <img src="../wedding-invitation-previewer/bgImages/blueGum.jpeg" title="blueGum" style="width:120px; padding-bottom: 10px; cursor: pointer;" onclick="changeBGImage('blueGum');">
+
+        </div> 
+
+        <!--column 2 (middle)-->
+        <div class="column middle">
+            <br><br><br>
+
+            <div id="printableArea">
+                
+                <!--Background Image div -->
+                <div id=changeBackGround style="background-image: url('../wedding-invitation-previewer/bgImages/yellowBanksia.jpeg')">
+                        
+                    <br>   
+
+                    <!--Announcement-->
+                    <p id="showAnn"></p>
+                    <br>
+                
+
+                    <!--Names-->
+                    <p id="showName1"></p> 
+                    <p id="showAnd"></p> 
+                    <p id="showName2"></p>
+                    <br><br>
+
+                    <!--Messasge to Guests-->
+                    <p id="showMessage"></p>
+
+                    <!--Date-->
+                    <p id="showingDate"></p>
+                    <br><br>
+
+                    <p id="showVenue"></p>
+
+                    <p id="showRSVP"></p>
+                    <br>
+                        
+                    
+                </div>
+            </div>
+            
+            <br>
+            <button id=save onclick="printInvite('printableArea')" value="save and print window">Save and Print</button>
+
+        </div>
+
+        <!--Column 3 - RHS enter info-->
+        <form class="column personalise">
+            <h2 id="pHeading">Personalise</h2>
+            
+            <br>
+
+            <h3>Announcement</h3>
+            <input type="text" id="announcement" placeholder="eg. Together with their families" onkeyup="displayText()"> 
+
+            
+            <h3>Names of Couple</h3>
+            <input type="text" id="nameOne" text-align="center" onkeyup="displayText()"> 
+            <br><br>
+
+            <input type="text" id="and" placeholder="and / & / +" text-align="center" onkeyup="displayText()"> 
+            <br><br>
+
+            <input type="text" id="nameTwo"  onkeyup="displayText()"> 
+
+            <h3>Message to Guests</h3>
+            <input type="text" id="welcome" placeholder="eg. Invite you to their Wedding" onkeyup="displayText()"> 
+            <br><br>
+            
+            <!--Date-->
+            <h3>Date and Location</h3>
+
+            <label>Select Date</label>
+            <input type="date" id="dateVal" onchange="displayDate()">
+            <br><br>
+            
+
+            <label>Location</label>
+            <input type="text" id="venue" placeholder="venue and address"  onkeyup="displayText()"> 
+            <br><br>
+            
+
+            <label>RSVP</label>
+            <input type="email" id="rsvp" placeholder="email or phone"  onkeyup="displayText()">
+            <br><br>
+            <br><br>
+
+        </form>
+
+        <!-- clear floats after all float-->
+        <div style="clear: both;"></div> 
+        <br><br>
+        <br><br>
+        <br><br>
+        <br><br>    
+    </div><!--end wrapper-->
+
+
+<script src="WildflowerJS.js"></script>
+
+</body> 
+</html>
